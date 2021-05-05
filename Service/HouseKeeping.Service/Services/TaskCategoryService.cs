@@ -6,6 +6,7 @@ using HouseKeeping.Data;
 using HouseKeeping.Data.Models;
 using HouseKeeping.Service.Interfaces;
 using HouseKeeping.Service.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace HouseKeeping.Service.Services
 {
@@ -25,7 +26,7 @@ namespace HouseKeeping.Service.Services
 
         public async Task<List<TaskCategoryServiceModel>> GetAllTaskCategoriesAsync()
         {
-            List<TaskCategory> taskCategories = this._context.TaskCategories.ToList();
+            List<TaskCategory> taskCategories = await this._context.TaskCategories.ToListAsync();
 
             List<TaskCategoryServiceModel> taskCategoryServiceModels = new();
             foreach (var taskCategory in taskCategories)

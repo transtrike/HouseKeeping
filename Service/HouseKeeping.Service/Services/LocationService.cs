@@ -87,7 +87,7 @@ namespace HouseKeeping.Service.Services
                 throw new InvalidOperationException(string.Format(ExceptionConstants.DoesNotExist, nameof(Location)));
 
             if (await this._context.Tasks.AnyAsync(x => x.Location == location))
-                throw new InvalidOperationException(string.Format(ExceptionConstants.InvalidDelete, nameof(Location)))
+                throw new InvalidOperationException(string.Format(ExceptionConstants.InvalidDelete, nameof(Location)));
 
             this._context.Locations.Remove(location);
             await this._context.SaveChangesAsync();

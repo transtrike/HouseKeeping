@@ -12,9 +12,9 @@ namespace HouseKeeping.Service.Interfaces
         Task<TaskServiceModel> GetTaskByIdAsync(Guid taskId);
 
         //HouseKeeper Only
-        Task<List<TaskServiceModel>>> GetAllAssignedTasks(Guid userId);
+        Task<List<TaskServiceModel>> GetAllAssignedTasks(Guid userId);
 
-        Task<List<TaskServiceModel>>> GetAllCreatedTasks(Guid userId);
+        Task<List<TaskServiceModel>> GetAllCreatedTasks(Guid userId);
 
         Task<TaskServiceModel> UpdateTaskAsync(TaskServiceModel taskServiceModel);
 

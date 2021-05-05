@@ -39,6 +39,7 @@ namespace HouseKeeping.Web
             services.AddTransient<ILocationService, LocationService>();
             services.AddTransient<ITaskCategoryService, TaskCategoryService>();
             services.AddTransient<ITaskStatusService, TaskStatusService>();
+            services.AddTransient<ITaskService, TaskService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
