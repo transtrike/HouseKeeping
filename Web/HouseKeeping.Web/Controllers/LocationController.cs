@@ -33,7 +33,7 @@ namespace HouseKeeping.Web.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetLocationById(Guid locationId)
+        public async Task<IActionResult> Details(Guid locationId)
         {
             LocationServiceModel locationServiceModel = await _locationService.GetByIdAsync(locationId);
 

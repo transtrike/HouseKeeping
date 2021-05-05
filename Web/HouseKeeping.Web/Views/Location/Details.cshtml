@@ -1,0 +1,19 @@
+@using System.Collections.Generic
+@model LocationWebModel
+
+<div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+            <tr>
+                <th>@Model.Id</th>
+                <th>@Model.Name</th>
+                <th>@Model.Address</th>
+                <th><a asp-action="DeleteLocation" asp-route-locationId="@Model.Id"></a>Delete</th>
+            </tr>
+    </table>
+</div>

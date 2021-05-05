@@ -15,7 +15,7 @@
                 <th>@location.Id</th>
                 <th>@location.Name</th>
                 <th>@location.Address</th>
-                <th></th>
+                <th><a asp-action="Details" asp-route-locationId="@location.Id"></a>Details</th>
             </tr>
         }
     </table>
