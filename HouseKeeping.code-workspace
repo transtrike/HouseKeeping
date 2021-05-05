@@ -1,0 +1,80 @@
+{
+	"folders": [
+		{
+			"name": "Web",
+			"path": "./Web"
+		},
+		{
+			"name": "Service",
+			"path": "./Service"
+		},
+		{
+			"name": "Data",
+			"path": "./Data"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.vscode": true,
+			"**/bin": true,
+			"**/obj": true,
+			".gitignore": true,
+			"**/*.code-workspace": true
+		},
+		"omnisharp.enableEditorConfigSupport": true,
+		"omnisharp.enableRoslynAnalyzers": true,
+		"csharp.semanticHighlighting.enabled": true,
+		"omnisharp.autoStart": true,
+		"omnisharp.organizeImportsOnFormat": true,
+		"csharp.referencesCodeLens.enabled": true,
+		"csharp.showOmnisharpLogOnError": true,
+		"csharp.suppressBuildAssetsNotification": true,
+		"csharp.testsCodeLens.enabled": true,
+		// "razor.disabled": true
+		"razor.devmode": true,
+	},
+	"launch": {
+		"configurations": [
+			{
+				"name": "Launch Project",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "workspace-build",
+				"program": "${workspaceFolder:Web}/HouseKeeping.Web/bin/Debug/net5.0/HouseKeeping.Web.dll",
+				"args": [],
+				"cwd": "${workspaceFolder:Web}/HouseKeeping.Web",
+				"stopAtEntry": false,
+				"env": {
+					"ASPNETCORE_ENVIRONMENT": "Development"
+				}
+			}
+		],
+		"compounds": []
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "workspace-build",
+				"command": "dotnet",
+				"type": "shell",
+				"options": {
+					"cwd": "${workspaceFolder:Web}/HouseKeeping.Web"
+				},
+				"args": [
+					"build",
+					"/property:GenerateFullPaths=true",
+					"/consoleloggerparameters:NoSummary"
+				],
+				"group": {
+					"kind": "build",
+					"isDefault": true
+				},
+				"presentation": {
+					"reveal": "silent"
+				},
+				"problemMatcher": "$msCompile"
+			}
+		]
+	},
+}

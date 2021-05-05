@@ -1,0 +1,22 @@
+@using System.Collections.Generic
+@model List<LocationWebModel>
+
+<div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        @foreach(var location in Model)
+        {
+            <tr>
+                <th>@location.Id</th>
+                <th>@location.Name</th>
+                <th>@location.Address</th>
+                <th></th>
+            </tr>
+        }
+    </table>
+</div>

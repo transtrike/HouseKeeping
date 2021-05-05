@@ -1,0 +1,60 @@
+Base Entity:
+- Id (key)
+
+Entity Location:
+- Name (str)
+- Address (str)
+
+Roles:
+- Administrator
+- Client (default)
+- HouseKeeper
+
+Entity User:
+- First Name (str)
+- Last Name (str)
+- Role (entity)
+
+Entity TaskCategory:
+- Name (str):
+    - почистване и дезинфекция (str)
+    - грижа за домашни любимци и растения (str)
+    - грижа за дете (str)
+    - грижа за възрастен човек (str)
+
+Entity TaskStatus:
+- Name (str):
+    - Чакаща (str)
+    - Назначена на домашен помощник (str)
+    - За преглед (str)
+    - Изпълнена (str)
+    - Отказана (str)
+
+Entity Task:
+- Name (str)
+- Description (str)
+- Location (entity)
+- Deadline (datetime)
+- Budget (decimal)
+- Category (entity)
+- Status (entity)
+- CompletionDate (datetime)
+- PictureURL (string)
+
+So every user can query all tasks, who are created by him, no matter their Status(entity)
+A User can "Cancel" a Task(entity), if the Task(entity) is "Awaiting"
+A User can mark a Task(entity) "Completed", if it's Status(entity) is "For Review"
+A User can edit: [Name, Description, Location, Deadline, Budget, Category] over a Task(entity),
+    BUT ONLY IF THE TASK'S STATUS(entity) IS "Awaiting"
+A User has full CRUD over Locations(entity), with exception of if a
+    Task(entity) has an assigned Location(entity)
+
+A HouseKeeper can view all assigned to him tasks
+A HouseKeeper can change Status(entity) of a Task to "For Review", if the Task(entity)
+    has been assigned to him/her
+Upon Status(entity) change, a picture must be provided as evidence of the work done
+
+An Admin has full CRUD over Tasks(entity) & Locations(entity)
+An Admin can assign a Task(entity) to A HouseKeeper(role)
+An Admin can change a Status(entity), no matter what
+An Admin can control creation and role assigning of other users

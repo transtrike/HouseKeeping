@@ -1,0 +1,12 @@
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/bin/Debug/net5.0/HouseKeeping.Service.Model.deps.json
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/bin/Debug/net5.0/HouseKeeping.Service.Model.dll
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/bin/Debug/net5.0/ref/HouseKeeping.Service.Model.dll
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/bin/Debug/net5.0/HouseKeeping.Service.Model.pdb
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/obj/Debug/net5.0/HouseKeeping.Service.Model.GeneratedMSBuildEditorConfig.editorconfig
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/obj/Debug/net5.0/HouseKeeping.Service.Model.AssemblyInfoInputs.cache
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/obj/Debug/net5.0/HouseKeeping.Service.Model.AssemblyInfo.cs
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/obj/Debug/net5.0/HouseKeeping.Service.Model.csproj.CoreCompileInputs.cache
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/obj/Debug/net5.0/HouseKeeping.Service.Model.dll
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/obj/Debug/net5.0/ref/HouseKeeping.Service.Model.dll
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/obj/Debug/net5.0/HouseKeeping.Service.Model.pdb
+/home/viko/Projects/CSharp/HouseKeeping/Service/HouseKeeping.Service.Model/obj/Debug/net5.0/HouseKeeping.Service.Model.csprojAssemblyReference.cache
