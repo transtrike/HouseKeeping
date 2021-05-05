@@ -12,9 +12,9 @@ namespace HouseKeeping.Service.Services
 {
     public class LocationService : ILocationService
     {
-        private readonly HouseKeepingDbContext _context;
+        private readonly HouseKeepingContext _context;
 
-        public LocationService(HouseKeepingDbContext context)
+        public LocationService(HouseKeepingContext context)
         {
             this._context = context;
         }
@@ -96,7 +96,7 @@ namespace HouseKeeping.Service.Services
         {
             return new LocationServiceModel()
             {
-                Id = location.Id == null ?
+                Id = location.Id == Guid.Empty ?
                     Guid.Empty :
                     location.Id,
                 Name = location.Name,

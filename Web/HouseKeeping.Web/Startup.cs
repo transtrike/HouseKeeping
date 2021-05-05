@@ -2,6 +2,7 @@ using System;
 using HouseKeeping.Data;
 using HouseKeeping.Data.Models;
 using HouseKeeping.Service.Interfaces;
+using HouseKeeping.Service.Models;
 using HouseKeeping.Service.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -24,7 +25,7 @@ namespace HouseKeeping.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<HouseKeepingDbContext>(options =>
+            services.AddDbContext<HouseKeepingContext>(options =>
             {
                 options.UseNpgsql(this.Configuration.GetConnectionString("DEV"));
             });
@@ -32,12 +33,14 @@ namespace HouseKeeping.Web
             services
                 .AddIdentity<AppUser, Role>()
                 .AddRoles<Role>()
-                .AddEntityFrameworkStores<HouseKeepingDbContext>();
+                .AddEntityFrameworkStores<HouseKeepingContext>();
 
             services.AddControllersWithViews();
             services.AddMvc();
 
             services.AddTransient<ILocationService, LocationService>();
+            services.AddTransient<ITaskCategoryService, TaskCategoryService>();
+            services.AddTransient<ITaskStatusService, TaskStatusService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

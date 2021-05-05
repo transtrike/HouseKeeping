@@ -11,9 +11,9 @@ namespace HouseKeeping.Service.Services
 {
     public class TaskCategoryService : ITaskCategoryService
     {
-        private readonly HouseKeepingDbContext _context;
+        private readonly HouseKeepingContext _context;
 
-        public TaskCategoryService(HouseKeepingDbContext context)
+        public TaskCategoryService(HouseKeepingContext context)
         {
             this._context = context;
         }
@@ -23,7 +23,7 @@ namespace HouseKeeping.Service.Services
             throw new NotImplementedException();
         }
 
-        public Task<List<TaskCategoryServiceModel>> GetAllTaskCategoriesAsync()
+        public async Task<List<TaskCategoryServiceModel>> GetAllTaskCategoriesAsync()
         {
             List<TaskCategory> taskCategories = this._context.TaskCategories.ToList();
 

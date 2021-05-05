@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace HouseKeeping.Data.Migrations
 {
-    public partial class Initial_Migration : Migration
+    public partial class OnlyTaskLeft : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -3,17 +3,15 @@ using System;
 using HouseKeeping.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace HouseKeeping.Data.Migrations
 {
-    [DbContext(typeof(HouseKeepingDbContext))]
-    [Migration("20210505165441_Initial_Migration")]
-    partial class Initial_Migration
+    [DbContext(typeof(HouseKeepingContext))]
+    partial class HouseKeepingContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
