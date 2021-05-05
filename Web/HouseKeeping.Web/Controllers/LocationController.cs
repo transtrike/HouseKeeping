@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using HouseKeeping.Service.Interfaces;
 using HouseKeeping.Service.Models;
-using HouseKeeping.Service.Services;
 using HouseKeeping.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -67,7 +66,7 @@ namespace HouseKeeping.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteLocation([FromBody] Guid locationId)
+        public async Task<IActionResult> DeleteLocation(Guid locationId)
         {
             await this._locationService.DeleteLocation(locationId);
 
