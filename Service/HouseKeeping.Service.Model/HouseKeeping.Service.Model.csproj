@@ -1,5 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\HouseKeeping.Data\HouseKeeping.Data.csproj" />
+    <ProjectReference Include="..\..\Data\HouseKeeping.Data.Model\HouseKeeping.Data.Model.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>

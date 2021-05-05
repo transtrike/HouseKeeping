@@ -48,9 +48,18 @@ namespace HouseKeeping.Service.Services
             throw new NotImplementedException();
         }
 
-        private static TaskStatusServiceModel MapToServiceModel(TaskStatus taskStatus)
+        public static TaskStatusServiceModel MapToServiceModel(TaskStatus taskStatus)
         {
             return new TaskStatusServiceModel()
+            {
+                Id = taskStatus.Id,
+                Name = taskStatus.Name
+            };
+        }
+
+        public static TaskStatus MapToPureModel(TaskStatusServiceModel taskStatus)
+        {
+            return new TaskStatus()
             {
                 Id = taskStatus.Id,
                 Name = taskStatus.Name

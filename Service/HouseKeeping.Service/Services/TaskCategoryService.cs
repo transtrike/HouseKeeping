@@ -54,12 +54,21 @@ namespace HouseKeeping.Service.Services
             throw new NotImplementedException();
         }
 
-        private static TaskCategoryServiceModel MapToServiceModel(TaskCategory taskCategory)
+        public static TaskCategoryServiceModel MapToServiceModel(TaskCategory taskCategory)
         {
             return new TaskCategoryServiceModel()
             {
                 Id = taskCategory.Id,
                 Name = taskCategory.Name
+            };
+        }
+
+        public static TaskCategory MapToPureModel(TaskCategoryServiceModel taskCategoryServiceModel)
+        {
+            return new TaskCategory()
+            {
+                Id = taskCategoryServiceModel.Id,
+                Name = taskCategoryServiceModel.Name
             };
         }
     }

@@ -1,8 +1,6 @@
-using System;
 using HouseKeeping.Data;
 using HouseKeeping.Data.Models;
 using HouseKeeping.Service.Interfaces;
-using HouseKeeping.Service.Models;
 using HouseKeeping.Service.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

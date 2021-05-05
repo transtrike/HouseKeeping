@@ -86,13 +86,16 @@ namespace HouseKeeping.Service.Services
             Location location = await this._context.Locations.FindAsync(id) ??
                 throw new InvalidOperationException(string.Format(ExceptionConstants.DoesNotExist, nameof(Location)));
 
+            if (await this._context.Tasks.AnyAsync(x => x.Location == location))
+                throw new InvalidOperationException(string.Format(ExceptionConstants.InvalidDelete, nameof(Location)))
+
             this._context.Locations.Remove(location);
             await this._context.SaveChangesAsync();
 
             return LocationService.MapToServiceModel(location);
         }
 
-        private static LocationServiceModel MapToServiceModel(Location location)
+        public static LocationServiceModel MapToServiceModel(Location location)
         {
             return new LocationServiceModel()
             {
@@ -104,7 +107,7 @@ namespace HouseKeeping.Service.Services
             };
         }
 
-        private static Location MapToPureModel(LocationServiceModel locationServiceModel)
+        public static Location MapToPureModel(LocationServiceModel locationServiceModel)
         {
             return new Location()
             {

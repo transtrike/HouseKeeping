@@ -73,7 +73,7 @@ namespace HouseKeeping.Web.Controllers
             return RedirectToAction("GetAllUserLocation");
         }
 
-        private static LocationServiceModel MapToServiceModel(LocationWebModel locationWebModel)
+        public static LocationServiceModel MapToServiceModel(LocationWebModel locationWebModel)
         {
             return new LocationServiceModel()
             {
@@ -83,7 +83,7 @@ namespace HouseKeeping.Web.Controllers
             };
         }
 
-        private static LocationWebModel MapToWebModel(LocationServiceModel locationServiceModel)
+        public static LocationWebModel MapToWebModel(LocationServiceModel locationServiceModel)
         {
             return new LocationWebModel()
             {

@@ -41,7 +41,7 @@ Entity Task:
 - CompletionDate (datetime)
 - PictureURL (string)
 
-So every user can query all tasks, who are created by him, no matter their Status(entity)
+So every user can query all tasks created by him
 A User can "Cancel" a Task(entity), if the Task(entity) is "Awaiting"
 A User can mark a Task(entity) "Completed", if it's Status(entity) is "For Review"
 A User can edit: [Name, Description, Location, Deadline, Budget, Category] over a Task(entity),
